@@ -12,6 +12,7 @@ func Run() {
 	app.Use(gin.Recovery())
 
 	bindCreateRoute(app)
+	bindUpdateRoute(app)
 
 	app.Run(fmt.Sprintf(":%v", viper.Get("app.port")))
 }
