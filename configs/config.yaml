@@ -1,0 +1,6 @@
+app:
+  name: todo
+  port: 8080
+
+storage:
+  todos: ./storage/todos.json
