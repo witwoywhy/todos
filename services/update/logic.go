@@ -1,7 +1,6 @@
 package update
 
 import (
-	"time"
 	"todos/ports/bizmodel"
 	"todos/ports/gettodo"
 	"todos/ports/updatetodo"
@@ -27,6 +26,6 @@ func buildUpdateTodoRequest(request Request, todo *bizmodel.Todo) updatetodo.Req
 	todo.Description = request.Description
 	todo.Image = request.Image
 	todo.Status = request.Status
-	todo.CreatedAtDatetime = time.Now().Format(time.RFC3339)
+	todo.Date = request.Date
 	return *todo
 }

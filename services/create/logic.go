@@ -22,6 +22,7 @@ func (r *Request) ToCreateTodoRequest() createtodo.Request {
 		Description:       r.Description,
 		Image:             r.Image,
 		Status:            r.Status,
+		Date:              r.Date,
 		CreatedAtDatetime: time.Now().Format(time.RFC3339),
 	}
 }

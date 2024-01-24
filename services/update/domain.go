@@ -12,4 +12,5 @@ type Request struct {
 	Description *string `json:"description"`
 	Image       *string `json:"image"`
 	Status      string  `json:"status" validate:"required,status"`
+	Date        string  `json:"date" validate:"required,RFC3339"`
 }

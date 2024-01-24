@@ -51,6 +51,7 @@ func TestExecute(t *testing.T) {
 					Description: ptr.ToPtr("test update"),
 					Image:       nil,
 					Status:      constants.StatusCompleted,
+					Date:        "2024-01-24T20:23:39+07:00",
 				},
 			},
 			when: &when{
@@ -81,6 +82,7 @@ func TestExecute(t *testing.T) {
 					Description: ptr.ToPtr("test update"),
 					Image:       nil,
 					Status:      constants.StatusCompleted,
+					Date:        "2024-01-24T20:23:39+07:00",
 				},
 			},
 			when: &when{
@@ -99,6 +101,7 @@ func TestExecute(t *testing.T) {
 					Description: ptr.ToPtr("test update"),
 					Image:       nil,
 					Status:      constants.StatusCompleted,
+					Date:        "2024-01-24T20:23:39+07:00",
 				},
 			},
 			when: &when{
@@ -117,6 +120,7 @@ func TestExecute(t *testing.T) {
 					Description: ptr.ToPtr("test update"),
 					Image:       nil,
 					Status:      constants.StatusCompleted,
+					Date:        "2024-01-24T20:23:39+07:00",
 				},
 			},
 			when: &when{

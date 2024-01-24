@@ -6,5 +6,6 @@ type Todo struct {
 	Description       *string `json:"description"`
 	Image             *string `json:"image"`
 	Status            string  `json:"status"`
+	Date              string  `json:"date"`
 	CreatedAtDatetime string  `json:"createdAtDatetime"`
 }
