@@ -5,8 +5,10 @@ import (
 	"todos/infra"
 	"todos/ports/createtodo"
 	"todos/ports/gettodo"
+	"todos/ports/gettodos"
 	"todos/ports/updatetodo"
 	"todos/services/create"
+	"todos/services/list"
 	"todos/services/update"
 
 	"github.com/gin-gonic/gin"
@@ -27,4 +29,12 @@ func bindUpdateRoute(app *gin.Engine) {
 	hdl := handler.NewUpdateHandler(service)
 
 	app.POST("/v1/update", hdl.Handle)
+}
+
+func bindListRoute(app *gin.Engine) {
+	getTodos := gettodos.NewAdaptorFile(infra.NewFileManager(infra.TodosStorage))
+	service := list.New(getTodos)
+	hdl := handler.NewListHandler(service)
+
+	app.GET("/v1/list", hdl.Handle)
 }

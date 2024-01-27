@@ -13,6 +13,7 @@ func Run() {
 
 	bindCreateRoute(app)
 	bindUpdateRoute(app)
+	bindListRoute(app)
 
 	app.Run(fmt.Sprintf(":%v", viper.Get("app.port")))
 }
